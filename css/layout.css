@@ -59,17 +59,17 @@ flex: 1;
 /* PASTE THE NEW CODE HERE */
 .header-button-container {
     display: flex !important;
-    flex-direction: row !important; 
-    gap: 20px;                      
-    margin-top: 32px;               
-    flex-wrap: wrap;                
-    justify-content: flex-start;    
+    flex-direction: row !important; /* Force side-by-side */
+    gap: 16px;                      /* Space between buttons */
+    margin-top: 32px;               /* Space above buttons */
+    flex-wrap: wrap;                /* Allow wrap on very small screens */
 }
 
+/* Force buttons to only be as wide as their text */
 .header-button-container .button {
-    width: fit-content !important;
-    display: inline-flex;
-    white-space: nowrap;            
+    width: auto !important;
+    flex: 0 1 auto !important;
+    display: inline-flex !important;     
 }
 
 /* About Section */
@@ -99,24 +99,20 @@ flex: 1;
 }
 
 .project-card {
-  flex: 1 1 calc(33.333% - 32px);
-  min-width: 280px;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start;
-  /* This ensures all cards in a row stay the same height */
-  height: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%; /* Ensure all cards in a row have equal height */
 }
 
+/* This pushes the Read More button to the absolute bottom of the card */
 .project-card .button {
-  margin-top: auto !important;
-  align-self: flex-start; /* Keeps the button on the left */
+    margin-top: auto !important;
 }
 
+/* Ensure the text container doesn't collapse */
 .project-card-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    flex-grow: 1;
+    margin-bottom: 20px;
 }
 
 .project-image {
