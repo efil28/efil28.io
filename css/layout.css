@@ -93,20 +93,23 @@ flex: 1;
 }
 
 .projects-container {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
+    display: flex !important;
+    flex-direction: row !important; /* Force horizontal layout */
+    flex-wrap: wrap !important;     /* Allows wrapping to next line if screen is small */
+    gap: 32px;                      /* Space between cards */
+    justify-content: center;        /* Centers cards on the page */
+    width: 100%;
 }
 
 .project-card {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100%; /* Ensure all cards in a row have equal height */
+    flex: 1 1 calc(33.333% - 32px); /* Three cards per row on desktop */
+    min-width: 300px;               /* Prevents them from getting too skinny */
+    display: flex;
+    flex-direction: column;
 }
 
-/* This pushes the Read More button to the absolute bottom of the card */
 .project-card .button {
-    margin-top: auto !important;
+    margin-top: auto;               /* Keeps 'Read More' buttons lined up at the bottom */
 }
 
 /* Ensure the text container doesn't collapse */
