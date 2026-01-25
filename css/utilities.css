@@ -1,40 +1,47 @@
-
-/* Icons */
+/* --- Icons & Links --- */
 
 .right-arrow-icon {
   width: 16px;
   height: 16px;
-  margin-top: 1px;
+  margin-left: 4px; /* Space it from the text */
 }
 
 .footer-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-icon:hover {
+  opacity: 1;
 }
 
 a.icon-link {
+  display: inline-flex;
   transition: transform 200ms ease-in-out;
 }
 
 a.icon-link:hover {
   cursor: pointer;
-  stroke-width: 5;
-  margin: 0;
-  transform: rotate(15deg);
+  transform: rotate(15deg) scale(1.1);
 }
 
-
-/* Navbar Styling */
+/* --- Navbar Styling --- */
 
 .navbar {
   width: 100%;
-  padding: 30px 50px;
+  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: fixed; /* Keeps it at the top while scrolling */
   top: 0;
   left: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+  backdrop-filter: blur(5px); /* Modern blur effect */
+  z-index: 1000; /* Ensures it stays on top of everything */
+  border-bottom: 1px solid #eee;
 }
 
 .nav-title-link {
@@ -44,53 +51,50 @@ a.icon-link:hover {
 
 .nav-title-link:hover {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  .navbar {
-    padding: 20px 20px;
-    background-color: white
-  }
-}
-
-
-/* Button Styling */
+/* --- Button Styling --- */
 
 a.button {
-  padding: 8px 16px;
-  border: 3px solid #141414;
+  padding: 10px 20px;
+  border: 2px solid #141414;
   border-radius: 50px;
-  color: black;
+  color: white;
+  background-color: #141414; /* Solid black for a pro look */
   text-decoration: none;
   width: fit-content;
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
 a.button:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+  background-color: transparent;
+  color: #141414;
   cursor: pointer;
 }
 
-
-/* Footer Styling */
+/* --- Footer Styling --- */
 
 #footer {
   width: 100%;
   display: flex;
-  padding: 30px 50px;
+  padding: 60px 50px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
 }
 
-/* Link Styling */
+/* --- Link Styling --- */
+
 a.no-underline {
   text-decoration: none;
-  color: black
+  color: black;
 }
 
 a.no-underline:hover {
@@ -98,9 +102,14 @@ a.no-underline:hover {
   cursor: pointer;
 }
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
+/* --- Media Queries (Small Devices) --- */
+
 @media only screen and (max-width: 800px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
   #footer {
-    padding: 20px 20px;
+    padding: 40px 20px;
   }
 }
