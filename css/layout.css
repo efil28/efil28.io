@@ -95,25 +95,26 @@ flex: 1;
 /* Forces the cards to sit side-by-side */
 .projects-container {
     display: flex !important;
-    flex-direction: row !important; 
-    flex-wrap: wrap !important;     
-    gap: 32px;                      
-    justify-content: flex-start;    
+    flex-direction: row !important; /* Forces side-by-side */
+    flex-wrap: wrap !important;     /* Allows wrapping on mobile */
+    gap: 32px;                      /* Space between cards */
+    justify-content: space-between; 
     width: 100%;
 }
 
-/* Defines the size of each card */
+/* Individual Card Styling */
 .project-card {
     flex: 1 1 calc(33.333% - 32px) !important; 
-    min-width: 280px;               
+    min-width: 280px;               /* Prevents cards from getting too thin */
     display: flex !important;
     flex-direction: column !important;
-    background: transparent;
+    justify-content: flex-start;
 }
 
-/* Pushes the 'Read More' button to the bottom */
+/* Forces the 'Read More' buttons to line up at the bottom */
 .project-card .button {
     margin-top: auto !important;
+    width: fit-content;
 }
 
 /* Ensure the text container doesn't collapse */
