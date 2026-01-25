@@ -60,13 +60,13 @@ body {
 #about-section {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Reduced from 16px */
+  gap: 10px !important; /* Reduces space between "About Me" and the text */
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Reduced from 34px */
+  gap: 16px !important; /* Reduces space between the two paragraphs */
 }
 
 /* Project Section Grid */
