@@ -92,24 +92,28 @@ flex: 1;
   gap: 32px;
 }
 
+/* Forces the cards to sit side-by-side */
 .projects-container {
     display: flex !important;
-    flex-direction: row !important; /* Force horizontal layout */
-    flex-wrap: wrap !important;     /* Allows wrapping to next line if screen is small */
-    gap: 32px;                      /* Space between cards */
-    justify-content: center;        /* Centers cards on the page */
+    flex-direction: row !important; 
+    flex-wrap: wrap !important;     
+    gap: 32px;                      
+    justify-content: flex-start;    
     width: 100%;
 }
 
+/* Defines the size of each card */
 .project-card {
-    flex: 1 1 calc(33.333% - 32px); /* Three cards per row on desktop */
-    min-width: 300px;               /* Prevents them from getting too skinny */
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 calc(33.333% - 32px) !important; 
+    min-width: 280px;               
+    display: flex !important;
+    flex-direction: column !important;
+    background: transparent;
 }
 
+/* Pushes the 'Read More' button to the bottom */
 .project-card .button {
-    margin-top: auto;               /* Keeps 'Read More' buttons lined up at the bottom */
+    margin-top: auto !important;
 }
 
 /* Ensure the text container doesn't collapse */
