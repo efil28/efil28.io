@@ -20,6 +20,7 @@ body {
 #main-content {
   max-width: 1100px; /* Limits width for readability */
   margin: 100px auto; /* Centers the whole site automatically */
+  margin-top: 120px; /* Adjust this if the navbar covers your text */
   padding: 0 24px;    /* Prevents content from touching screen edges */
   display: flex;
   flex-direction: column;
