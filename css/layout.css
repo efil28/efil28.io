@@ -59,17 +59,15 @@ flex: 1;
 /* PASTE THE NEW CODE HERE */
 .header-button-container {
     display: flex !important;
-    flex-direction: row !important; /* Force side-by-side */
-    gap: 16px;                      /* Space between buttons */
-    margin-top: 32px;               /* Space above buttons */
-    flex-wrap: wrap;                /* Allow wrap on very small screens */
+    flex-direction: row !important; /* Side-by-side */
+    gap: 16px;
+    margin-top: 32px;
 }
 
-/* Force buttons to only be as wide as their text */
+/* Ensure the resume button looks exactly like the project button */
 .header-button-container .button {
-    width: auto !important;
-    flex: 0 1 auto !important;
-    display: inline-flex !important;     
+    width: fit-content !important;
+    display: inline-flex !important;
 }
 
 /* About Section */
