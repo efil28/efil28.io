@@ -74,15 +74,15 @@ flex: 1;
 
 /* About Section */
 #about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px !important; /* Reduces space between "About Me" and the text */
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important; /* Tightens space between title and first paragraph */
 }
 
 .about-section-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px !important; /* Reduces space between the two paragraphs */
+    display: flex;
+    flex-direction: column;
+    gap: 16px !important; /* Tightens space between the two paragraphs */
 }
 
 /* Project Section Grid */
