@@ -1,105 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
+<head>
+    <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
-		<title>Eric Filliol Porfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <title>Eric Filliol Portfolio</title>
+    <meta name="description" content="Electrical Engineering Portfolio - Eric Filliol">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
 
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Eric Filliol</span>
-      </a>
-      <a class="button" href="mailto:ericsfilliol@gmail.com">
-        <span class="button-text">Contact Me</span>
-      </a>
-    </div>
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
 
-    <div id="main-content">
+    <nav class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Eric Filliol</span>
+        </a>
+        <a class="button" href="mailto:ericsfilliol@gmail.com">
+            <span class="button-text">Contact Me</span>
+        </a>
+    </nav>
 
-    <div id="portfolio-header-image-container">
-  <img src="./assets/images/Headshot-min.jpg" class="portfolio-header-image" alt="Eric Filliol Headshot">
-	</div>
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm Eric.</span>
-              <div class="body-text"> Canadian Electrical Engineering student (2nd year) specializing in Electronics and Hardware. Proficient in C, VHDL, PCB design, and digital systems.</div>
+    <main id="main-content">
+
+        <section id="portfolio-header">
+            <div id="portfolio-header-image-container">
+                <img src="./assets/images/Headshot-min.jpg" class="portfolio-header-image" alt="Eric Filliol Headshot">
             </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-        </div>
-      </div>
-
-      <div id="my-work-section">
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">High Voltage Breakout Board</div>
-              <div class="body-text project-card-text">Designed and built a 24V breakout board that safely and efficiently transmit power to the QBMET exoskeleton.</div>
+            
+            <div id="portfolio-header-text-container">
+                <div class="header-text">
+                    <h1 class="main-title">Hey, I'm Eric.</h1>
+                    <p class="body-text">
+                        Canadian Electrical Engineering student (2nd year) specializing in Electronics and Hardware. 
+                        Proficient in C, VHDL, PCB design, and digital systems.
+                    </p>
+                </div>
+                <a class="button" id="my-work-link" href="#my-work-section">
+                    <span class="button-text">Check out my projects</span> 
+                    <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
+                </a>
             </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Power Management Module</div>
-              <div class="body-text project-card-text">Designed a power management module for Queens Knights Robotics Team.</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Custom Core XY Printer</div>
-              <div class="body-text project-card-text">Short description of your third project, focusing on the microcontroller or C programming.</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">Second-year Electrical Engineering student based in Canada. I am an engineering student who has a passion in electronics and hardware design. My current focus is on microcontroller programming, robust PCB design, and digital systems.</div>
-          <div class="body-text"></div> 
-        </div>
-      </div>
-    </div>
+        </section>
 
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/ericfilliol/">
-        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" target="_blank" href="https://github.com/efil28">
-        <image src="./assets/icons/github.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" href="mailto:ericsfilliol@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
+        <section id="my-work-section">
+            <h2 class="subheader-text">My Work / My Projects</h2>
+
+            <div class="projects-container">
+                
+                <div class="project-card">
+                    <img src="./assets/images/desktop.jpeg" class="project-image" alt="High Voltage Board">
+                    <div class="project-card-text-container">
+                        <h3 class="subheader-text project-title">High Voltage Breakout Board</h3>
+                        <p class="body-text project-card-text">Designed and built a 24V breakout board that safely and efficiently transmits power to the QBMET exoskeleton.</p>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="./assets/images/code.jpeg" class="project-image" alt="Power Module">
+                    <div class="project-card-text-container">
+                        <h3 class="subheader-text project-title">Power Management Module</h3>
+                        <p class="body-text project-card-text">Designed a power management module for Queens Knights Robotics Team, focusing on voltage regulation and current protection.</p>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="./assets/images/sketchbook.jpeg" class="project-image" alt="Core XY Printer">
+                    <div class="project-card-text-container">
+                        <h3 class="subheader-text project-title">Custom Core XY Printer</h3>
+                        <p class="body-text project-card-text">Developing a custom firmware and hardware interface for high-speed precision 3D printing using an STM32 microcontroller.</p>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="about-section">
+            <h2 class="subheader-text">My Background / About Me</h2>
+            <div class="about-section-content">
+                <p class="body-text">
+                    Second-year Electrical Engineering student based in Canada with a passion for electronics and hardware design. 
+                    I thrive on the intersection of software and hardware, specifically in microcontroller programming and robust PCB design.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/ericfilliol/">
+            <img src="./assets/icons/linkedin.svg" class="footer-icon" alt="LinkedIn">
+        </a>
+        <a class="icon-link" target="_blank" href="https://github.com/efil28">
+            <img src="./assets/icons/github.svg" class="footer-icon" alt="GitHub">
+        </a>
+        <a class="icon-link" href="mailto:ericsfilliol@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email">
+        </a>
+    </footer>
+
+</body>
+</html>
     </div>
 
 	</body>
