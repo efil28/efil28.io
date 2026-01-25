@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   box-sizing: border-box;
 }
@@ -5,63 +6,56 @@
 html {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
 }
 
-
-
-
-/* Main Page Layout */
-
+/* Main Page Layout - Responsive Centering */
 #main-content {
-  margin: 225px 425px;
+  max-width: 1100px; /* Limits width for readability */
+  margin: 100px auto; /* Centers the whole site automatically */
+  padding: 0 24px;    /* Prevents content from touching screen edges */
   display: flex;
   flex-direction: column;
   gap: 96px;
 }
 
-
-
-
-/* Portfolio Header */
-
+/* Portfolio Header - The Side-by-Side Fix */
 #portfolio-header {
   display: flex;
-  gap: 20px;
+  gap: 48px;
   align-items: center;
+  justify-content: center;
 }
 
 #portfolio-header-image-container {
+  flex: 0 1 380px; /* Limits headshot size so it doesn't take over */
   display: flex;
   flex-direction: column;
   gap: 10px;
-  flex-basis: 50%;
 }
 
 .portfolio-header-image {
   width: 100%;
-  height: auto;
+  height: auto;      /* Prevents warping */
+  border-radius: 16px;
+  object-fit: cover; /* Ensures the photo fills the space cleanly */
 }
 
 #portfolio-header-text-container {
+  flex: 1;           /* Text fills the remaining space */
   display: flex;
   flex-direction: column;
-  gap: 34px;
-  flex-basis: 50%;
+  gap: 24px;
 }
 
-
-
-
 /* About Section */
-
 #about-section {
   display: flex;
   flex-direction: column;
@@ -74,150 +68,80 @@ body {
   gap: 34px;
 }
 
-
-
-
-/* Project Section */
-
+/* Project Section Grid */
 #my-work-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .projects-container {
   display: flex;
-  gap: 34px 16px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
-    /* Project Cards */
-
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
-
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-
-
-
-/* Project Pages */
-
-#project-header {
+.project-card {
+  flex: 1 1 calc(33.333% - 32px); /* 3 cards per row */
+  min-width: 280px;               /* Stacks them if screen gets too small */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
-.project-header-image {
+.project-card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-image {
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-#project-details {
+/* Footer & Icons */
+#footer {
+  padding: 60px 0;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  gap: 24px;
 }
 
-.project-details-content {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
+.footer-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
 }
 
-    /* Project Gallery */
-
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
-
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
-
-
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
+.footer-icon:hover {
+  transform: translateY(-3px);
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
-}
+/* Responsive Media Queries */
 
-/* Large devices (laptops/desktops, 1000px and below) */
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
-
+/* Tablet View */
+@media only screen and (max-width: 900px) {
   #portfolio-header {
-    flex-direction: column;
+    flex-direction: column; /* Stack image on top of text */
+    text-align: center;
+    gap: 32px;
   }
-
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
+  
+  #portfolio-header-image-container {
+    flex: 0 1 300px; /* Slightly smaller image on tablet */
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
+/* Mobile View */
 @media only screen and (max-width: 600px) {
   #main-content {
-    margin: 125px 20px;
+    margin: 60px auto;
   }
 
   .project-card {
-    max-width: 100%;
+    flex: 1 1 100%; /* Cards take full width on phones */
   }
 }
-
-
-
