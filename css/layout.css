@@ -60,13 +60,13 @@ body {
 #about-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px; /* Reduced from 16px */
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 16px; /* Reduced from 34px */
 }
 
 /* Project Section Grid */
@@ -83,11 +83,17 @@ body {
 }
 
 .project-card {
-  flex: 1 1 calc(33.333% - 32px); /* 3 cards per row */
-  min-width: 280px;               /* Stacks them if screen gets too small */
+  flex: 1 1 calc(33.333% - 32px);
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* Add this to ensure the card height is consistent in a row */
+  height: auto;
+}
+
+.project-card .button {
+  margin-top: auto; /* This pushes the button to the very bottom of the card */
 }
 
 .project-card-text-container {
