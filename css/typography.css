@@ -40,11 +40,14 @@ body {
 .project-title {
   font-size: 20px;
   font-weight: 700;
-  /* Change these lines to allow the full text to show */
-  overflow: visible; 
-  text-overflow: clip;
-  display: block; /* Changed from -webkit-box */
+  /* Fix: Removes the "..." and allows the full title to show */
+  display: block !important; 
+  overflow: visible !important;
+  text-overflow: clip !important;
+  -webkit-line-clamp: unset !important;
   line-height: 1.2;
+  margin-bottom: 8px;
+  /* Fix: Ensures titles with 1 line or 2 lines don't break alignment */
   min-height: 3em;
 }
 
