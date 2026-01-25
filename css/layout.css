@@ -55,6 +55,15 @@ body {
   flex-direction: column;
   gap: 24px;
 }
+.header-button-container {
+    display: flex;
+    gap: 16px; 
+    flex-wrap: wrap; 
+}
+
+.header-button-container .button {
+    width: fit-content;
+}
 
 /* About Section */
 #about-section {
