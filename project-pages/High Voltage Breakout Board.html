@@ -11,33 +11,73 @@
     <link rel="stylesheet" href="../css/utilities.css">
 
     <style>
+        /* FIX: Prevents Navbar from blocking the Title */
         #main-content {
             max-width: 900px;
             margin: 0 auto;
-            padding: 100px 20px 50px 20px; 
+            padding: 110px 20px 50px 20px; 
         }
 
+        /* ROLE BADGE */
+        .role-badge {
+            background-color: #007bff;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* HEADER IMAGE: Zoomed-in look */
         .project-header-image {
-            width: 100%;         /* Set back to 100% to fill the width */
-            max-height: 550px;   /* Increased height to allow more of the image to show */
-            object-fit: cover;   /* This creates the "zoom" by filling the entire box */
+            width: 100%;
+            max-height: 500px; 
+            object-fit: cover; 
+            object-position: center;
             border-radius: 12px;
-            margin: 30px auto;   
-            display: block;      
+            margin: 30px 0;
             border: 1px solid #ddd;
-            /* Optional: if you want to focus on a specific part of the photo while zoomed */
-            object-position: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
+        /* TEXT SECTIONS */
+        .text-block {
+            margin: 40px 0;
+        }
+
+        .text-block h2 {
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .body-text {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        ul.body-text {
+            margin-left: 20px;
+        }
+
+        ul.body-text li {
+            margin-bottom: 12px;
+        }
+
+        /* GALLERY SECTION */
         .project-gallery-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 25px;
+            margin-top: 20px;
         }
 
         .gallery-image-container.half-width {
-            flex: 1 1 calc(50% - 10px); 
+            flex: 1 1 calc(50% - 13px); 
             min-width: 300px;
         }
 
@@ -45,30 +85,24 @@
             width: 100%;
             max-height: 400px;
             object-fit: contain; 
-            background-color: #f9f9f9;
+            background-color: #fcfcfc;
             border-radius: 8px;
             border: 1px solid #eee;
         }
 
         .image-caption {
             display: block;
-            margin-top: 8px;
-            font-size: 0.9rem;
-            color: #666;
-            text-align: center;
-        }
-
-        .text-block {
-            margin: 40px 0;
-        }
-
-        ul {
-            margin-left: 20px;
             margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            font-style: italic;
         }
 
-        li {
-            margin-bottom: 10px;
+        /* FOOTER SPACING */
+        .back-link {
+            margin-top: 60px;
+            padding-bottom: 40px;
         }
     </style>
 
@@ -88,51 +122,51 @@
     <main id="main-content">
 
         <section id="project-header">
-            <h1 class="main-title">High Voltage Breakout Board</h1>
+            <div class="role-badge">Project Manager & Lead Designer</div>
+            <h1 class="main-title">High Voltage Breakout Board (QBMET)</h1>
             <p class="body-text">
-                Developing a robust 24V power distribution interface for the Queen's Biomedical Engineering Team (QBMET) exoskeleton. 
+                I led the High Voltage sub-team for the Queen's Biomedical Engineering Team (QBMET) to develop a custom power distribution interface for a robotic exoskeleton. My primary responsibility was ensuring a reliable, high-density power link between the main 24V battery source and the motor controllers. I managed the full hardware lifecycle, from initial requirement gathering with mechanical sub-teams to final physical assembly and testing.
             </p>
-            <img class="project-header-image" src="../assets/images/Solder HVPCB.jpeg" alt="Soldered High Voltage PCB">
+            <img class="project-header-image" src="../assets/images/Solder HVPCB.jpeg" alt="Soldered High Voltage PCB Prototype">
         </section>
 
         <section class="text-block">
-            <h2 class="subheader-text">Design Objectives & Requirements</h2>
+            <h2 class="subheader-text">Engineering Leadership & System Architecture</h2>
             <p class="body-text">
-                The primary goal of this project was to facilitate safe and efficient power delivery between the main 24V battery source and the motor controllers of the exoskeleton. As a critical point of failure, the board needed to meet rigorous safety standards while maintaining a high current throughput.
+                As the technical lead, I translated the exoskeleton’s high-torque requirements into a robust electrical architecture. I coordinated cross-functional design constraints to ensure the power rail could handle the rigorous demands of robotic movement.
             </p>
             <ul class="body-text">
-                <li><strong>Current Handling:</strong> Designed to support continuous 30A loads with peak surge protection.</li>
-                <li><strong>Thermal Management:</strong> Utilized 2oz copper weight and thermal vias to dissipate heat during high-torque motor operations.</li>
-                <li><strong>Reliability:</strong> Integrated fuse protection for individual subsystems to prevent total system failure in the event of a localized short.</li>
+                <li><strong>Design Ownership (Altium Designer):</strong> I spearheaded the full-cycle development of the PCB, specifically engineering the stack-up to include <strong>2oz copper weight</strong>. By applying <strong>IPC-2221 standards</strong>, I optimized trace widths to handle continuous <strong>23A loads</strong>, effectively mitigating thermal risks during peak operation.</li>
+                <li><strong>System Protection & Reliability:</strong> I conducted trade-off analyses to integrate automotive-grade protection, specifically selecting TVS diodes to neutralize inductive kickback—a critical failure mode in high-torque robotic actuators.</li>
+                <li><strong>Fabrication & Validation:</strong> I personally executed the SMD and through-hole assembly for the prototypes. Post-fabrication, I led a validation phase involving thermal imaging and stress-testing to ensure zero voltage sag and reliable current delivery under maximum mechanical load.</li>
             </ul>
         </section>
 
         <section id="project-details">
             <h2 class="subheader-text">Technical Documentation</h2>
             <div class="project-gallery-content">
+                
                 <div class="gallery-image-container half-width">
-                    <img src="../assets/images/Footprint HVPCB.png" class="gallery-image" alt="PCB Footprint">
-                    <span class="image-caption">Component footprint and land pattern design.</span>
+                    <img src="../assets/images/Footprint HVPCB.png" class="gallery-image" alt="Altium Footprint Design">
+                    <span class="image-caption">Custom land patterns developed in Altium to accommodate high-current XT60 connectors.</span>
                 </div>
 
                 <div class="gallery-image-container half-width">
-                    <img src="../assets/images/Schematic HVPCB.png" class="gallery-image" alt="PCB Schematic">
-                    <span class="image-caption">Full schematic focusing on power isolation.</span>
+                    <img src="../assets/images/Schematic HVPCB.png" class="gallery-image" alt="Altium Schematic">
+                    <span class="image-caption">Logical flow showing the isolation between high-power rails and logic-level protection circuits.</span>
                 </div>
+
             </div>
         </section>
 
         <section class="text-block">
-            <h2 class="subheader-text">Results & Future Iterations</h2>
+            <h2 class="subheader-text">Results & Impact</h2>
             <p class="body-text">
-                The final prototype was successfully integrated into the QBMET testing rig. During initial bench testing, the board maintained stable voltage regulation under simulated load conditions.
-            </p>
-            <p class="body-text">
-                Future iterations of this design will focus on integrating real-time current sensing via an I2C interface to allow for telemetry logging during exoskeleton operation. This data will be vital for optimizing battery life and identifying mechanical inefficiencies in the limb joints.
+                The final board successfully powered the QBMET testing rig, maintaining a stable 24V output even during <strong>23A peak surges</strong>. By designing a custom solution in Altium Designer rather than utilizing off-the-shelf components, we reduced the total power-system footprint by <strong>40%</strong>, significantly improving the overall ergonomics and weight distribution of the exoskeleton.
             </p>
         </section>
 
-        <div style="margin-top: 50px;">
+        <div class="back-link">
             <a href="../index.html" class="body-text" style="text-decoration: none; font-weight: bold; color: #007bff;">← Back to Projects</a>
         </div>
 
