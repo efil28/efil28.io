@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
 
+    <style>
+        /* Styling for the coming-soon buttons */
+        .disabled-button {
+            opacity: 0.6;
+            cursor: not-allowed;
+            filter: grayscale(0.5);
+        }
+    </style>
+
     <script defer src="./js/script.js"></script>
 </head>
 <body>
@@ -75,15 +84,14 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="./assets/images/Schematic HVPCB.png" class="project-image" alt="Power Module">
+                    <img src="./assets/images/code.jpeg" class="project-image" alt="Power Module">
                     <div class="project-card-text-container">
                         <h3 class="subheader-text project-title">Power Management Module</h3>
                         <p class="body-text project-card-text">Developing advanced voltage regulation and current protection for the Queen's Knights Robotics Team.</p>
                     </div>
-                    <a class="button" href="./project-pages/project-template.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
-                    </a>
+                    <div class="button disabled-button">
+                        <span class="button-text">Coming Soon</span>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -92,10 +100,9 @@
                         <h3 class="subheader-text project-title">Queen's Additive Manufacturing Club</h3>
                         <p class="body-text project-card-text">Founding President leading 3D printing innovation and sustainable hardware development.</p>
                     </div>
-                    <a class="button" href="./project-pages/project-template.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow">
-                    </a>
+                    <div class="button disabled-button">
+                        <span class="button-text">Coming Soon</span>
+                    </div>
                 </div>
 
             </div>
