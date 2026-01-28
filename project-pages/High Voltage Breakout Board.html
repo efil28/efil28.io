@@ -18,14 +18,15 @@
         }
 
         .project-header-image {
-            width: 85%; /* Slightly smaller for that "zoomed out" look */
-            max-height: 400px; 
-            object-fit: contain; 
-            background-color: #f4f4f4; 
+            width: 100%;         /* Set back to 100% to fill the width */
+            max-height: 550px;   /* Increased height to allow more of the image to show */
+            object-fit: cover;   /* This creates the "zoom" by filling the entire box */
             border-radius: 12px;
-            margin: 20px auto;   
+            margin: 30px auto;   
             display: block;      
             border: 1px solid #ddd;
+            /* Optional: if you want to focus on a specific part of the photo while zoomed */
+            object-position: center; 
         }
 
         .project-gallery-content {
