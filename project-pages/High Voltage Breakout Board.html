@@ -11,6 +11,67 @@
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
 
+    <style>
+        /* This fixes the "Huge Image" problem */
+        #main-content {
+            max-width: 900px; /* Limits overall page width for better readability */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project-header-image {
+            width: 100%;
+            max-height: 450px; /* Prevents the top image from being massive */
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid #ddd;
+        }
+
+        .project-gallery-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-image-container {
+            flex: 1 1 100%; /* Default to full width */
+        }
+
+        /* Makes half-width images actually half-width */
+        .gallery-image-container.half-width {
+            flex: 1 1 calc(50% - 10px); 
+            min-width: 300px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            max-height: 350px; /* Limits gallery image height */
+            object-fit: contain; /* Ensures schematics/PCBs aren't cropped */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+
     <script defer src="../js/script.js"></script>
 </head>
 <body>
@@ -46,7 +107,7 @@
                     <ul>
                         <li>Integrated heavy copper traces to minimize $I^2R$ power losses and heat generation.</li>
                         <li>Implemented transient voltage suppression (TVS) diodes to protect sensitive logic from inductive kickback.</li>
-                        <li>Designed the PCB layout in Altium, focusing on optimal component placement for thermal dissipation.</li>
+                        <li>Designed the PCB layout in Altium Designer, focusing on optimal component placement for thermal dissipation.</li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +124,7 @@
 
                 <div class="gallery-image-container half-width">
                     <img src="../assets/images/sketchbook.jpeg" class="gallery-image" alt="3D PCB Render">
-                    <span class="image-caption">3D render of the final PCB layout showing component density and trace routing.</span>
+                    <span class="image-caption">3D render of the final PCB layout showing component density.</span>
                 </div>
 
                 <div class="gallery-image-container">
@@ -75,7 +136,7 @@
         </section>
 
         <div style="margin-top: 50px; padding-bottom: 50px;">
-            <a href="../index.html" class="body-text" style="text-decoration: none; font-weight: bold;">← Back to Projects</a>
+            <a href="../index.html" class="body-text" style="text-decoration: none; font-weight: bold; color: #007bff;">← Back to Projects</a>
         </div>
 
     </main>
